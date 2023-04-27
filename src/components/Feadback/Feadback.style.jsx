@@ -26,7 +26,9 @@ export const FeedbackButton = styled.button`
 export const FeedbackGood = styled.div`
     background-color: green;
     color: white;
+    display: flex;
 `
+
 export const FeedbacknNeutral = styled.div`
     background-color: gray;
     color: white;

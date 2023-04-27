@@ -1,5 +1,5 @@
 import { Component } from "react"
-import { FeedbackLabel, FeedbackHeading, FeedbackBtns, FeedbackButton, FeedbackGood, FeedbacknNeutral, FeedbackBad, Statistics, StatisticsHeading, FeedbackContent, FeedbackContentHeading, FeedbackTotal, FeedbackPositive } from "./Feadback.style";
+import { FeedbackLabel, FeedbackHeading, FeedbackBtns, FeedbackButton, FeedbackGood, FeedbacknNeutral, FeedbackBad, Statistics, StatisticsHeading, FeedbackContent, FeedbackContentHeading, FeedbackTotal, FeedbackPositive, StatisticCell } from "./Feadback.style";
 
 export class Feadback extends Component {
 
@@ -49,19 +49,19 @@ export class Feadback extends Component {
             <StatisticsHeading>Statistics</StatisticsHeading>
             <FeedbackContent>
               <FeedbackGood>
-                <FeedbackContentHeading>Good</FeedbackContentHeading>
+                <FeedbackContentHeading>Good :</FeedbackContentHeading>
               </FeedbackGood>
               <FeedbacknNeutral>
-                <FeedbackContentHeading>Neutral</FeedbackContentHeading>
+                <FeedbackContentHeading>Neutral :</FeedbackContentHeading>
               </FeedbacknNeutral>
               <FeedbackBad>
-                <FeedbackContentHeading>Bad</FeedbackContentHeading>
+                <FeedbackContentHeading>Bad :</FeedbackContentHeading>
               </FeedbackBad>
               <FeedbackTotal>
-                <FeedbackContentHeading>Total</FeedbackContentHeading>
+                <FeedbackContentHeading>Total :</FeedbackContentHeading>
               </FeedbackTotal>
               <FeedbackPositive>
-                <FeedbackContentHeading>Positive feedback</FeedbackContentHeading>
+                <FeedbackContentHeading>Positive<br/>feedback :</FeedbackContentHeading>
               </FeedbackPositive>
             </FeedbackContent>
           </Statistics>
