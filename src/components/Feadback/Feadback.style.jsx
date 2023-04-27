@@ -9,8 +9,11 @@ export const FeedbackHeading = styled.h2`
     margin-bottom: 10px;
 `
 export const FeedbackBtns = styled.div`
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    // flex-direction: column;
+    justify-content: left;
+    gap: 5px;
+    
 `
 export const FeedbackButton = styled.button`
     font-size: 18px;
@@ -33,10 +36,19 @@ export const FeedbackBad = styled.div`
     background-color: red;
     color: white;
 `
-export const Statistics = styled.div`
-    margin-top: 30px;
+export const FeedbackTotal = styled.div`
+    background-color: blue;
+    color: white;
+`
+export const FeedbackPositive = styled.div`
+    background-color: orange;
+    color: white;
 `
 
+export const Statistics = styled.div`
+    margin-top: 30px;
+    max-width: 200px;
+`
 export const StatisticsHeading = styled.h2`
    font-size: 24px;
    font-weight: bold;
@@ -44,8 +56,10 @@ export const StatisticsHeading = styled.h2`
 `
 export const FeedbackContent = styled.div`
    display: flex;
+   flex-direction: column;
    justify-content: space-between;
-   width: 30%;
+//    width: 30%;
+   gap: 5px;
 `
 export const FeedbackContentHeading = styled.h3`
     font-size: 20px;
