@@ -1,38 +1,38 @@
 import { Component } from "react"
-import { FeedbackLabel, FeedbackHeading, FeedbackBtns, FeedbackButton, FeedbackGood, FeedbacknNeutral, FeedbackBad, Statistics, StatisticsHeading, FeedbackContent, FeedbackContentHeading, FeedbackTotal, FeedbackPositive, StatisticCell } from "./Feadback.style";
+import { FeedbackLabel, FeedbackHeading, FeedbackBtns, FeedbackButton, FeedbackGood, FeedbacknNeutral, FeedbackBad, Statistics, StatisticsHeading, FeedbackContent, FeedbackContentHeading, FeedbackTotal, FeedbackPositive } from "./Feadback.style";
 
 export class Feadback extends Component {
 
-    static defaultProps = {
-        initialValue: 0,
-      };
+    // static defaultProps = {
+    //     initialValue: 0,
+    //   };
 
-      state = {
-        good: this.props.initialValue,
-        neutral: this.props.initialValue,
-        bad: this.props.initialValue
-      }
+      // state = {
+      //   good: this.props.initialValue,
+      //   neutral: this.props.initialValue,
+      //   bad: this.props.initialValue
+      // }
 
-      incrementValueGood = () => {
-        this.setState(prevState => ({
-            good: prevState.good + 1,
-        }))
-      }
+      // incrementValueGood = () => {
+      //   this.setState(prevState => ({
+      //       good: prevState.good + 1,
+      //   }))
+      // }
 
-      incrementValueNeutral = () => {
-        this.setState(prevState => ({
-            neutral: prevState.neutral + 1,
-        }))
-      }
+      // incrementValueNeutral = () => {
+      //   this.setState(prevState => ({
+      //       neutral: prevState.neutral + 1,
+      //   }))
+      // }
 
-      incrementValueBad = () => {
-        this.setState(prevState => ({
-            bad: prevState.bad + 1,
-        }))
-      }
+      // incrementValueBad = () => {
+      //   this.setState(prevState => ({
+      //       bad: prevState.bad + 1,
+      //   }))
+      // }
 
       render() {
-        const { good, neutral, bad } = this.state;
+        // const { good, neutral, bad } = this.state;
     
         return (
             <>
