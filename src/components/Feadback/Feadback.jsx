@@ -31,6 +31,17 @@ export class Feadback extends Component {
         }));
       };
 
+      
+      countTotalFeedback(good, neutral, bad){
+        let total = (good + neutral + bad);
+        return total;
+      };
+
+      countPositiveFeedbackPercentage(good, neutral, bad){
+        let positiveFeedback = (good / (good + neutral + bad) * 100);
+        return positiveFeedback;
+      }
+
 
       render() {
         const { good, neutral, bad } = this.state;
@@ -59,10 +70,10 @@ export class Feadback extends Component {
                 <FeedbackContentHeading>Bad : {bad}</FeedbackContentHeading>
               </FeedbackBad>
               <FeedbackTotal>
-                <FeedbackContentHeading>Total : {good + neutral + bad}</FeedbackContentHeading>
+                <FeedbackContentHeading>Total : {this.countTotalFeedback(good, neutral, bad)}</FeedbackContentHeading>
               </FeedbackTotal>
               <FeedbackPositive>
-                <FeedbackContentHeading>Positive<br/>feedback : {good}%</FeedbackContentHeading>
+                <FeedbackContentHeading>Positive<br/>feedback : {Math.round(this.countPositiveFeedbackPercentage(good, neutral, bad))}%</FeedbackContentHeading>
               </FeedbackPositive>
             </FeedbackContent>
           </Statistics>
