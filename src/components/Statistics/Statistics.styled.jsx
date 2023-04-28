@@ -1,34 +1,10 @@
 import styled from "styled-components";
 
-export const FeedbackLabel = styled.div`
-    margin-bottom: 30px;
-`  
-export const FeedbackHeading = styled.h2`
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-`
-export const FeedbackBtns = styled.div`
-    display: inline-flex;
-    // flex-direction: column;
-    justify-content: left;
-    gap: 5px;
-    
-`
-export const FeedbackButton = styled.button`
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-`
 export const FeedbackGood = styled.div`
     background-color: green;
     color: white;
     display: flex;
 `
-
 export const FeedbacknNeutral = styled.div`
     background-color: gray;
     color: white;
@@ -47,7 +23,7 @@ export const FeedbackPositive = styled.div`
     color: white;
 `
 
-export const Statistics = styled.div`
+export const StatisticsSection = styled.div`
     margin-top: 30px;
     max-width: 200px;
 `
