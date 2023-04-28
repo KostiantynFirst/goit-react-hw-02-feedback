@@ -3,45 +3,46 @@ import { FeedbackLabel, FeedbackHeading, FeedbackBtns, FeedbackButton, FeedbackG
 
 export class Feadback extends Component {
 
-    // static defaultProps = {
-    //     initialValue: 0,
-    //   };
+    static defaultProps = {
+        initialValue: 0,
+      };
 
-      // state = {
-      //   good: this.props.initialValue,
-      //   neutral: this.props.initialValue,
-      //   bad: this.props.initialValue
-      // }
+      state = {
+        good: this.props.initialValue,
+        neutral: this.props.initialValue,
+        bad: this.props.initialValue
+      }
 
-      // incrementValueGood = () => {
-      //   this.setState(prevState => ({
-      //       good: prevState.good + 1,
-      //   }))
-      // }
+      incrementGood = () => {
+        this.setState(prevState => ({
+          good: prevState.good + 1,
+        }));
+      };
 
-      // incrementValueNeutral = () => {
-      //   this.setState(prevState => ({
-      //       neutral: prevState.neutral + 1,
-      //   }))
-      // }
+      incrementNeutral = () => {
+        this.setState(prevState => ({
+          neutral: prevState.neutral + 1,
+        }));
+      };
 
-      // incrementValueBad = () => {
-      //   this.setState(prevState => ({
-      //       bad: prevState.bad + 1,
-      //   }))
-      // }
+      incrementBad = () => {
+        this.setState(prevState => ({
+          bad: prevState.bad + 1,
+        }));
+      };
+
 
       render() {
-        // const { good, neutral, bad } = this.state;
+        const { good, neutral, bad } = this.state;
     
         return (
             <>
             <FeedbackLabel>
             <FeedbackHeading>Please leave feedback</FeedbackHeading>
             <FeedbackBtns>
-              <FeedbackButton>Good</FeedbackButton>
-              <FeedbackButton>Neutral</FeedbackButton>
-              <FeedbackButton>Bad</FeedbackButton>
+              <FeedbackButton type="button" data-name="good" onClick={this.incrementGood}>Good</FeedbackButton>
+              <FeedbackButton type="button" data-name="neutral" onClick={this.incrementNeutral}>Neutral</FeedbackButton>
+              <FeedbackButton type="button" data-name="bad" onClick={this.incrementBad}>Bad</FeedbackButton>
             </FeedbackBtns>
           </FeedbackLabel>
           
@@ -49,19 +50,19 @@ export class Feadback extends Component {
             <StatisticsHeading>Statistics</StatisticsHeading>
             <FeedbackContent>
               <FeedbackGood>
-                <FeedbackContentHeading>Good :</FeedbackContentHeading>
+                <FeedbackContentHeading>Good : {good}</FeedbackContentHeading>
               </FeedbackGood>
               <FeedbacknNeutral>
-                <FeedbackContentHeading>Neutral :</FeedbackContentHeading>
+                <FeedbackContentHeading>Neutral : {neutral}</FeedbackContentHeading>
               </FeedbacknNeutral>
               <FeedbackBad>
-                <FeedbackContentHeading>Bad :</FeedbackContentHeading>
+                <FeedbackContentHeading>Bad : {bad}</FeedbackContentHeading>
               </FeedbackBad>
               <FeedbackTotal>
-                <FeedbackContentHeading>Total :</FeedbackContentHeading>
+                <FeedbackContentHeading>Total : {good + neutral + bad}</FeedbackContentHeading>
               </FeedbackTotal>
               <FeedbackPositive>
-                <FeedbackContentHeading>Positive<br/>feedback :</FeedbackContentHeading>
+                <FeedbackContentHeading>Positive<br/>feedback : {good}%</FeedbackContentHeading>
               </FeedbackPositive>
             </FeedbackContent>
           </Statistics>
