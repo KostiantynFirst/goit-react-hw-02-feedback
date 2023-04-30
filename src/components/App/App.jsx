@@ -16,24 +16,6 @@ export class App extends Component {
       bad: this.props.initialValue
     }
 
-    // incrementGood = () => {
-    //   this.setState(prevState => ({
-    //     good: prevState.good + 1,
-    //   }));
-    // };
-
-    // incrementNeutral = () => {
-    //   this.setState(prevState => ({
-    //     neutral: prevState.neutral + 1,
-    //   }));
-    // };
-
-    // incrementBad = () => {
-    //   this.setState(prevState => ({
-    //     bad: prevState.bad + 1,
-    //   }));
-    // };
-
     onleaveFeadback = option => {
       this.setState(prevState => ({
         [option]: prevState[option] + 1,
