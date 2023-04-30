@@ -14,4 +14,9 @@ export const FeedbackButton = styled.button`
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
+    &:active {
+        background-color: #e6e6e6;
+        transform: translateY(1px); 
+    }
 `
