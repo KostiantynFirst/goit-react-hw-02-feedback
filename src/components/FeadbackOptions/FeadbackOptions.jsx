@@ -1,11 +1,18 @@
 import { FeedbackBtns, FeedbackButton } from "./FeadbackOptions.styled"
 
-export const FeadbackOptions = ({incrementGood, incrementNeutral, incrementBad }) => {
+export const FeadbackOptions = ({options, onleaveFeadback}) => {
     return (
         <FeedbackBtns>
-            <FeedbackButton type="button" onClick={incrementGood}>Good</FeedbackButton>
-            <FeedbackButton type="button" onClick={incrementNeutral}>Neutral</FeedbackButton>
-            <FeedbackButton type="button" onClick={incrementBad}>Bad</FeedbackButton>
+         {options.map(option => (
+        <FeedbackButton type="button" key={option} onClick={() => onleaveFeadback(option)}>{option}</FeedbackButton>
+    ))}
+         
+            {/* {options.map(({option}) => {
+                <FeedbackButton type="button" onClick={onleaveFeadback}>{option}</FeedbackButton>
+            ))}         */}
         </FeedbackBtns>
     )
 }
+
+
+

@@ -43,6 +43,6 @@ export const FeedbackContent = styled.div`
 export const FeedbackContentHeading = styled.h3`
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 `
 

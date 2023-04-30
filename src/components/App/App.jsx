@@ -16,23 +16,29 @@ export class App extends Component {
       bad: this.props.initialValue
     }
 
-    incrementGood = () => {
-      this.setState(prevState => ({
-        good: prevState.good + 1,
-      }));
-    };
+    // incrementGood = () => {
+    //   this.setState(prevState => ({
+    //     good: prevState.good + 1,
+    //   }));
+    // };
 
-    incrementNeutral = () => {
-      this.setState(prevState => ({
-        neutral: prevState.neutral + 1,
-      }));
-    };
+    // incrementNeutral = () => {
+    //   this.setState(prevState => ({
+    //     neutral: prevState.neutral + 1,
+    //   }));
+    // };
 
-    incrementBad = () => {
+    // incrementBad = () => {
+    //   this.setState(prevState => ({
+    //     bad: prevState.bad + 1,
+    //   }));
+    // };
+
+    onleaveFeadback = option => {
       this.setState(prevState => ({
-        bad: prevState.bad + 1,
-      }));
-    };
+        [option]: prevState[option] + 1,
+      }))
+    }
 
     
     // countTotalFeedback(good, neutral, bad){
@@ -56,11 +62,7 @@ export class App extends Component {
               <FeedbackHeading>Please leave feedback</FeedbackHeading>
           </FeedbackLabel>
           
-        <FeadbackOptions
-            incrementGood={this.incrementGood}
-            incrementNeutral= {this.incrementNeutral}
-            incrementBad={this.incrementBad}
-        />
+        <FeadbackOptions options={['good', 'neutral', 'bad']} onleaveFeadback={this.onleaveFeadback}/>
 
         {
           good || neutral || bad ?  
