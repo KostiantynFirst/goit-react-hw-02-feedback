@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const FeedbackGood = styled.div`
     background-color: green;
     color: white;
-    display: flex;
 `
 export const FeedbacknNeutral = styled.div`
     background-color: gray;
@@ -25,6 +24,8 @@ export const FeedbackPositive = styled.div`
 
 export const StatisticsSection = styled.div`
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 200px;
 `
 export const StatisticsHeading = styled.h2`

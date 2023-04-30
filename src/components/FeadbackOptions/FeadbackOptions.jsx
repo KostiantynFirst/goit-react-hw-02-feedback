@@ -1,11 +1,11 @@
 import { FeedbackBtns, FeedbackButton } from "./FeadbackOptions.styled"
 
-export const FeadbackOptions = () => {
+export const FeadbackOptions = ({incrementGood, incrementNeutral, incrementBad }) => {
     return (
         <FeedbackBtns>
-            <FeedbackButton type="button" onClick={this.incrementGood}>Good</FeedbackButton>
-            <FeedbackButton type="button" onClick={this.incrementNeutral}>Neutral</FeedbackButton>
-            <FeedbackButton type="button" onClick={this.incrementBad}>Bad</FeedbackButton>
+            <FeedbackButton type="button" onClick={incrementGood}>Good</FeedbackButton>
+            <FeedbackButton type="button" onClick={incrementNeutral}>Neutral</FeedbackButton>
+            <FeedbackButton type="button" onClick={incrementBad}>Bad</FeedbackButton>
         </FeedbackBtns>
     )
 }
